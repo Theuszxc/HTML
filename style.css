@@ -1,78 +1,55 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  background-color: #9e9e9e;
-  color: #ffffff;
-  font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px;
-  min-height: 100vh;
+font-family: Arial, sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+background-color: #4d3939;
 }
 
-h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  font-weight: bold;
+.calculadora {
+background-color: #333;
+border-radius: 5px;
+padding: 20px;
+box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #222222;
-  padding: 20px 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px #ff0000;
+#visor {
+width: 100%;
+height: 40px;
+font-size: 24px;
+text-align: right;
+margin-bottom: 10px;
+padding: 5px;
+background-color: #ffffff;
+border: none;
 }
 
-input[type="number"],
-select,
-button {
-  font-size: 1.1em;
-  padding: 10px;
-  margin: 10px 0;
-  width: 200px;
-  border-radius: 8px;
-  text-align: center;
-  border: 2px solid #ffffff;
-  background-color: #000000;
-  color: #ffffff;
-}
-
-input::placeholder {
-  color: #ffffffaa;
-}
-
-select {
-  color: #ffffffaa;
+.botoes {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 5px;
 }
 
 button {
-  background-color: #ffffffaa;
-  color: #000000;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+padding: 10px;
+font-size: 18px;
+border: none;
+background-color: #757575;
+color: rgb(255, 255, 255);
+cursor: pointer;
+transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #ffffff;
+background-color: #45a049;
 }
 
-#resultado {
-  margin-top: 20px;
-  font-size: 1.8em;
-  font-weight: bold;
-  color: #FFD700;
+.operador {
+background-color: #0084ff;
 }
 
-#erro {
-  margin-top: 10px;
-  color: #ff4c4c;
-  font-weight: bold;
+.operador:hover {
+background-color: #5a4948;
 }

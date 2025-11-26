@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Calculadora</title>
-  <link rel="stylesheet" href="css/style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora Simples</title>
+
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="calculadora">
 
-  <h1>Calculadora</h1>
+<input type="text" id="visor" readonly>
 
-  <form id="form">
-    <input type="number" id="num1" name="num1" placeholder="Insira 1 número" required />
+<div class="botoes">
+<button onclick="limpar()">C</button>
+<button onclick="apagar()">←</button>
+<button onclick="adicionar('%')">%</button>
+<button class="operador" onclick="adicionar('/')">/</button>
+<button onclick="adicionar('7')">7</button>
+<button onclick="adicionar('8')">8</button>
+<button onclick="adicionar('9')">9</button>
+<button class="operador" onclick="adicionar('')"></button>
+<button onclick="adicionar('4')">4</button>
+<button onclick="adicionar('5')">5</button>
+<button onclick="adicionar('6')">6</button>
+<button class="operador" onclick="adicionar('-')">-</button>
+<button onclick="adicionar('1')">1</button>
+<button onclick="adicionar('2')">2</button>
+<button onclick="adicionar('3')">3</button>
+<button class="operador" onclick="adicionar('+')">+</button>
+<button onclick="adicionar('0')">0</button>
+<button onclick="adicionar('.')">.</button>
+<button onclick="calcular()" class="operador" style="grid-column: span 2;">=</button>
+</div>
+</div>
 
-    <select id="operacao" required>
-      <option value="" disabled selected>--- Selecione ---</option>
-      <option value="somar">Somar</option>
-      <option value="subtrair">Subtrair</option>
-      <option value="multiplicar">Multiplicar</option>
-      <option value="dividir">Dividir</option>
-    </select>
-
-    <input type="number" id="num2" name="num2" placeholder="Insira 1 número" required />
-
-    <button type="submit">Calcular</button>
-  </form>
-
-  <div id="erro"></div>
-  <div id="resultado"></div>
-
-  <script src="js/app.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>
